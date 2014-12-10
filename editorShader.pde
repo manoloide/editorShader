@@ -1,4 +1,11 @@
-//intentar que no se rompa cuando se ponee un shader no valido
+/*
+  Manoloide 2014
+  manoloide@gmail.com
+  
+  lista:
+    - Intentar validar shader antes de aplicarlos
+    - Agregar scroll para cuando hay muchos shaders;
+*/  
 
 import java.awt.Frame;
 

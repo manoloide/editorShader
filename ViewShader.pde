@@ -27,12 +27,7 @@ class ViewShader {
       //shader.set("iGlobalTime", frameRate/6.);
       gra.beginDraw();
       gra.background(0);
-      try {
-        gra.shader(shader);
-      } 
-      catch (Exception e) {
-        shader = null;
-      }
+      gra.shader(shader);
       gra.rect(0, 0, gra.width, gra.height);
       gra.endDraw();
 
@@ -52,7 +47,9 @@ class ViewShader {
       fileShader = file;
       timeModi = fileShader.lastModified();
       shader = loadShader(file.getAbsolutePath());
+      println("sadasdas");
       shader.set("resolution", float(width), float(height));
+      println("sadasdas");
     }
   }
 }
