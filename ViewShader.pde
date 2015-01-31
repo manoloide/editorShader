@@ -47,9 +47,7 @@ class ViewShader {
       fileShader = file;
       timeModi = fileShader.lastModified();
       shader = loadShader(file.getAbsolutePath());
-      println("sadasdas");
       shader.set("resolution", float(width), float(height));
-      println("sadasdas");
     }
   }
 }

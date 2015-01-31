@@ -21,10 +21,10 @@ void main( void ) {
 	col.b = 0.5+0.5*cos(time*1.23769);
 	col.a = 1.;
 
-	col.rgb = 0;
+	//col.rgb = 0;
 
 	if(mod(-position.x+position.y+time*0.1, 0.05) < 0.025){
-		col.rgb = 1 -col.rgb;
+		col.rgb = 1.0 -col.rgb;
 	}
 
 	gl_FragColor = col;

@@ -16,7 +16,7 @@ void main( void ) {
 
 	//sum += texture2D(pixels, position + pixel * vec2(-1., -1.)).g;
 	vec4 col; 
-	col.r = 1;//0.8+0.2*cos(time*0.34441);
+	col.r = 1.0;//0.8+0.2*cos(time*0.34441);
 	col.g = 0.5;//0.5+0.5*cos(time*0.84342);
 	col.b = 0.5+0.5*cos(time*1.23769);
 	col.a = 1.;
