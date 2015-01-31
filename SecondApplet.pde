@@ -78,6 +78,9 @@ public class secondApplet extends PApplet {
       }
       if (selec) {
         fill(70);
+        if (vs.error) {
+          fill(200, 10, 10);
+        }
       }
       rect(xx, yy+i*16, ww, 16);
       textAlign(LEFT, TOP);

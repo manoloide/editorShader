@@ -1,7 +1,5 @@
-import java.io.IOException;
-
 class ViewShader {
-  boolean reload;
+  boolean reload, error, loaded;
   File fileShader;
   long timeModi;
   String src;
@@ -46,8 +44,24 @@ class ViewShader {
     if (file != null) {
       fileShader = file;
       timeModi = fileShader.lastModified();
-      shader = loadShader(file.getAbsolutePath());
-      shader.set("resolution", float(width), float(height));
+      try { 
+        shader = loadShader(file.getAbsolutePath());
+        println(file.getAbsolutePath());
+        shader.set("resolution", float(width), float(height));
+        error = false;
+        loaded = true;
+      }
+      catch (RuntimeException e) {    
+        if (error == false) { 
+          error = true;
+          // String time = nf(str(hour()),2) + ":" + nf(str(minute()),2) + ":" + nf(str(second()),2);
+          println("\n");
+          // println("At", time, "loadShader() returned the following error: \n");
+          println("loadShader() returned the following error: \n");
+          e.printStackTrace();
+        }
+        loaded = false;
+      }
     }
   }
 }

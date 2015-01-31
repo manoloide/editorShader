@@ -25,6 +25,7 @@ void setup() {
   
   dirFolderShaders = sketchPath("shaders/");
   loadFolderShader();
+  println(shadersNames.length);
 
   vs1 = new ViewShader(shadersPaths[0]);
   vs2 = new ViewShader(shadersPaths[1]);
